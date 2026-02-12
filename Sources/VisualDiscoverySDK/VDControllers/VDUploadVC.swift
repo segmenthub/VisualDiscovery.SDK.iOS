@@ -6,7 +6,7 @@
 
 import UIKit
 
-class VDUploadVC: UIViewController {
+public class VDUploadVC: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var buttonUpload: UIButton!
@@ -14,8 +14,16 @@ class VDUploadVC: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     var selectedImage: UIImage?
+    
+    public init() {
+        super.init(nibName: "VDUploadVC", bundle: Bundle.module)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.imageView.layer.cornerRadius = 40
         let closeButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeTapped))

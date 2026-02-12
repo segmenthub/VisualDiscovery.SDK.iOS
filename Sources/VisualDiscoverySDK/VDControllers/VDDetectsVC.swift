@@ -6,7 +6,7 @@
 
 import UIKit
 
-class VDDetectsVC: UIViewController {
+public class VDDetectsVC: UIViewController {
     
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
@@ -19,13 +19,21 @@ class VDDetectsVC: UIViewController {
     var selectedImage: UIImage?
     var selectedIndex = 0
     var boxView: UIView?
+    
+    public init() {
+        super.init(nibName: "VDDetectsVC", bundle: Bundle.module)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "VDDetectCC", bundle: nil), forCellWithReuseIdentifier: "VDDetectCC")
     }
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.imageView.image = selectedImage
         self.bgImageView.image = selectedImage

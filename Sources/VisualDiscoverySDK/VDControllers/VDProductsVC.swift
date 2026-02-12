@@ -6,7 +6,7 @@
 
 import UIKit
 
-class VDProductsVC: UIViewController {
+public class VDProductsVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var emptyListLabel: UILabel!
@@ -15,8 +15,16 @@ class VDProductsVC: UIViewController {
     var searchUrl: String?
     var requestId: String?
     var products: [VDProductItem] = []
+    
+    public init() {
+        super.init(nibName: "VDProductsVC", bundle: Bundle.module)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.addSearchBarToNavigationBar( )
         self.collectionView.register(UINib(nibName: "VDProductCC", bundle: nil), forCellWithReuseIdentifier: "VDProductCC")
@@ -129,9 +137,7 @@ extension VDProductsVC: UISearchControllerDelegate {
 }
 
 extension VDProductsVC: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        self.presenter.getRelatedContactsFor(key: searchText)
-    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
 }
 
 extension VDProductsVC: VDProductCCProtocol {
