@@ -6,13 +6,13 @@
 
 import UIKit
 
-class VDDetectCC: UICollectionViewCell {
+public class VDDetectCC: UICollectionViewCell {
     
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelName: UILabel!
 
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
     }
 

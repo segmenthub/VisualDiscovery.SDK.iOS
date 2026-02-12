@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol VDProductCCProtocol {
+public protocol VDProductCCProtocol {
     func similarProductsTappedFor(productId: String?)
 }
 
-class VDProductCC: UICollectionViewCell {
+public class VDProductCC: UICollectionViewCell {
     
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -25,7 +25,7 @@ class VDProductCC: UICollectionViewCell {
     var delegate: VDProductCCProtocol?
     var model: VDProductItem?
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.viewContainer.layer.cornerRadius = 10
         self.viewPercent.layer.cornerRadius = 10

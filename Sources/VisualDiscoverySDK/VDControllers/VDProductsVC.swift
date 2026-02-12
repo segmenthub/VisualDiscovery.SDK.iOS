@@ -98,11 +98,11 @@ public class VDProductsVC: UIViewController {
 }
 
 extension VDProductsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.products.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VDProductCC", for: indexPath)
         let model = self.products[indexPath.row]
         if let cell = cell as? VDProductCC {
@@ -111,13 +111,13 @@ extension VDProductsVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.width-50)/2
         let height = width * 1.6
         return CGSize(width: width, height: height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = self.products[indexPath.row]
         VisualDiscoverySDK.shared.sendEventForProduct(eventUrl: model.click_event_url)
         self.navigationController?.dismiss(animated: true) {
@@ -127,21 +127,21 @@ extension VDProductsVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 }
 
 extension VDProductsVC: UISearchControllerDelegate {
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.refineSearchFor(text: nil)
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.refineSearchFor(text: searchBar.text)
     }
 }
 
 extension VDProductsVC: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
 }
 
 extension VDProductsVC: VDProductCCProtocol {
-    func similarProductsTappedFor(productId: String?) {
+    public func similarProductsTappedFor(productId: String?) {
         self.getSimilarsFor(productId: productId)
     }
 }
