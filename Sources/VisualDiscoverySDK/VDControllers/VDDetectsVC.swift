@@ -30,7 +30,7 @@ public class VDDetectsVC: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.register(UINib(nibName: "VDDetectCC", bundle: nil), forCellWithReuseIdentifier: "VDDetectCC")
+        self.collectionView.registerFor(identifier: "VDDetectCC")
     }
     
     public override func viewDidLayoutSubviews() {

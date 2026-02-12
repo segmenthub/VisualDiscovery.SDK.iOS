@@ -27,7 +27,7 @@ public class VDProductsVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.addSearchBarToNavigationBar( )
-        self.collectionView.register(UINib(nibName: "VDProductCC", bundle: nil), forCellWithReuseIdentifier: "VDProductCC")
+        self.collectionView.registerFor(identifier: "VDProductCC")
         self.makeSearchFor(search_url: self.searchUrl)
         let resetButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetSearch))
         self.navigationItem.rightBarButtonItem = resetButton
