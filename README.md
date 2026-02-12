@@ -50,7 +50,7 @@ Add your Account ID to your application's `Info.plist` file.
 **XML Representation:**
 ```xml
 <key>VDAccountID</key>
-<string>YOUR_ACCOUNT_ID_HERE</string>
+<string>YOUR_ACCOUNT_ID</string>
 ```
 
 ### Option 2: Programmatic Configuration
