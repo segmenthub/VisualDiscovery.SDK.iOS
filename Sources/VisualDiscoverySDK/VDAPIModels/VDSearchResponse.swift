@@ -6,7 +6,7 @@
 
 import Foundation
 
-nonisolated struct VDSearchResponse : Codable, Sendable {
+nonisolated public struct VDSearchResponse : Codable, Sendable {
     
 	let status : String?
 	let similar_products : [VDProductItem]?

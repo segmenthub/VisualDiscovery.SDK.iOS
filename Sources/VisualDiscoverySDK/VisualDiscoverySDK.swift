@@ -13,7 +13,7 @@ public protocol VisualDiscoverySDKProtocol {
 
 public class VisualDiscoverySDK {
     
-    static let shared = VisualDiscoverySDK()
+    public static let shared = VisualDiscoverySDK()
     
     public var delegate: VisualDiscoverySDKProtocol?
     private var account_id: String?

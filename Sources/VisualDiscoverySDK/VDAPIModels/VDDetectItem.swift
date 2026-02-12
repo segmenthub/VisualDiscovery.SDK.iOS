@@ -5,7 +5,7 @@
 //
 
 import Foundation
-struct VDDetectItem : Codable {
+nonisolated public struct VDDetectItem : Codable {
     
 	let label : String?
 	let confidence : Double?

@@ -5,7 +5,7 @@
 //
 
 import Foundation
-struct VDBoxModel : Codable {
+nonisolated public struct VDBoxModel : Codable {
 	let x1 : Int?
 	let y1 : Int?
 	let x2 : Int?

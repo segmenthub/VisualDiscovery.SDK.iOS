@@ -6,7 +6,7 @@
 
 import Foundation
 
-nonisolated struct VDDetectResponse : Codable, Sendable {
+nonisolated public struct VDDetectResponse : Codable, Sendable {
     
 	let status : String?
 	let request_id : String?

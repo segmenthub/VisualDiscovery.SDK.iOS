@@ -5,7 +5,8 @@
 //
 
 import Foundation
-struct VDProductItem : Codable {
+
+public struct VDProductItem : Codable {
 	let id : String?
 	let name : String?
 	let url : String?
