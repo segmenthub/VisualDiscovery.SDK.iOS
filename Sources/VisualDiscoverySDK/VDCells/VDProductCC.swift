@@ -2,7 +2,7 @@
 //  VDProductCC.swift
 //  VD Demo
 //
-//  Created by Mehmet Kılınçkaya on 5.02.2026.
+//  Created by segmenthub on 5.02.2026.
 //
 
 import UIKit

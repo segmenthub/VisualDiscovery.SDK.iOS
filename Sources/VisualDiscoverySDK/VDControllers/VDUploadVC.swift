@@ -1,7 +1,7 @@
 //
 //  VisualDiscoverySDK.swift
 //
-//  Created by Mehmet Kılınçkaya on 30.01.2026.
+//  Created by segmenthub on 30.01.2026.
 //
 
 import UIKit

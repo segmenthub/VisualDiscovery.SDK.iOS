@@ -2,7 +2,7 @@
 //  VDExtensions.swift
 //  VD Demo
 //
-//  Created by Mehmet Kılınçkaya on 12.02.2026.
+//  Created by segmenthub on 12.02.2026.
 //
 
 import Foundation
