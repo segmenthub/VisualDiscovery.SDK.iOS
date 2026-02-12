@@ -22,7 +22,7 @@ nonisolated public struct VDDetectItem : Codable {
         case box = "box"
 	}
 
-	init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		label = try values.decodeIfPresent(String.self, forKey: .label)
 		confidence = try values.decodeIfPresent(Double.self, forKey: .confidence)

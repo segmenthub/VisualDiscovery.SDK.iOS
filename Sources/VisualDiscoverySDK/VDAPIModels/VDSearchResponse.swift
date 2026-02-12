@@ -17,7 +17,7 @@ nonisolated public struct VDSearchResponse : Codable, Sendable {
 		case similar_products = "similar_products"
 	}
 
-	init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		similar_products = try values.decodeIfPresent([VDProductItem].self, forKey: .similar_products)

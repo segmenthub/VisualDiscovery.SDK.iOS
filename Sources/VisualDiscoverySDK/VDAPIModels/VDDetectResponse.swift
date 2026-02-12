@@ -19,7 +19,7 @@ nonisolated public struct VDDetectResponse : Codable, Sendable {
 		case detections = "detections"
 	}
 
-	init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		request_id = try values.decodeIfPresent(String.self, forKey: .request_id)

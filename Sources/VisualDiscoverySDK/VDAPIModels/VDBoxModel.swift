@@ -19,7 +19,7 @@ nonisolated public struct VDBoxModel : Codable {
 		case y2 = "y2"
 	}
 
-	init(from decoder: Decoder) throws {
+	public init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		x1 = try values.decodeIfPresent(Int.self, forKey: .x1)
 		y1 = try values.decodeIfPresent(Int.self, forKey: .y1)
