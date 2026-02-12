@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VDUploadVC" customModule="VD_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonCamera" destination="zSV-L6-5Tr" id="VnC-s0-7NB"/>
+                <outlet property="buttonUpload" destination="17H-Ft-hZO" id="Ydi-In-ngS"/>
+                <outlet property="imageView" destination="Bxr-aM-i5M" id="tvf-Pf-FNB"/>
+                <outlet property="loadingIndicator" destination="ffc-kW-GCq" id="jbM-BN-yTu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bxr-aM-i5M">
+                    <rect key="frame" x="156.66666666666666" y="135.66666666666666" width="80" height="84.000000000000028"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <color key="tintColor" red="0.27058823529999998" green="0.24313725489999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="9cN-1n-hw6"/>
+                        <constraint firstAttribute="width" constant="80" id="Kdp-zc-sdJ"/>
+                    </constraints>
+                    <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifiy &amp; Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENl-W1-vVg">
+                    <rect key="frame" x="115" y="248.00000000000003" width="163" height="26.333333333333343"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload an image to detect clothing and find similar items in our database." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMk-MO-9HC">
+                    <rect key="frame" x="30" y="284.33333333333331" width="333" height="28.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfz-6r-anc">
+                    <rect key="frame" x="88.000000000000014" y="343" width="217.33333333333337" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17H-Ft-hZO">
+                            <rect key="frame" x="0.0" y="0.0" width="157.33333333333334" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="IrM-BY-wEh"/>
+                            </constraints>
+                            <color key="tintColor" red="0.27058823529999998" green="0.24313725489999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Upload Photo" imagePadding="5">
+                                <imageReference key="image" image="icloud.and.arrow.up.fill" catalog="system" symbolScale="medium"/>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="uploadTapped" destination="-1" eventType="touchUpInside" id="3ov-8d-TmT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSV-L6-5Tr">
+                            <rect key="frame" x="167.33333333333334" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="tIL-7z-99N"/>
+                                <constraint firstAttribute="height" constant="50" id="vOz-aU-lir"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted">
+                                <imageReference key="image" image="camera.fill" catalog="system" symbolScale="small"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="cameraTapped" destination="-1" eventType="touchUpInside" id="T8C-gh-uSJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="17H-Ft-hZO" firstAttribute="top" secondItem="nfz-6r-anc" secondAttribute="top" id="4wZ-iZ-8Je"/>
+                        <constraint firstAttribute="trailing" secondItem="zSV-L6-5Tr" secondAttribute="trailing" id="8vi-9d-g35"/>
+                        <constraint firstItem="zSV-L6-5Tr" firstAttribute="top" secondItem="nfz-6r-anc" secondAttribute="top" id="KyL-rX-72M"/>
+                        <constraint firstItem="17H-Ft-hZO" firstAttribute="leading" secondItem="nfz-6r-anc" secondAttribute="leading" id="Lhl-fG-Efc"/>
+                        <constraint firstAttribute="bottom" secondItem="zSV-L6-5Tr" secondAttribute="bottom" id="QBt-Yz-DNA"/>
+                        <constraint firstItem="zSV-L6-5Tr" firstAttribute="leading" secondItem="17H-Ft-hZO" secondAttribute="trailing" constant="10" id="RQk-cm-wM5"/>
+                        <constraint firstAttribute="bottom" secondItem="17H-Ft-hZO" secondAttribute="bottom" id="XKq-Ek-Xpo"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-kW-GCq">
+                    <rect key="frame" x="178" y="423" width="37" height="37"/>
+                    <color key="tintColor" red="0.27058823529999998" green="0.24313725489999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Bxr-aM-i5M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="34H-vJ-jeq"/>
+                <constraint firstItem="Bxr-aM-i5M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5hz-ai-gAq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pMk-MO-9HC" secondAttribute="trailing" constant="30" id="5ys-WQ-BHj"/>
+                <constraint firstItem="ENl-W1-vVg" firstAttribute="top" secondItem="Bxr-aM-i5M" secondAttribute="bottom" constant="30" id="7cx-Jg-rpT"/>
+                <constraint firstItem="nfz-6r-anc" firstAttribute="top" secondItem="pMk-MO-9HC" secondAttribute="bottom" constant="30" id="7xF-dg-YfZ"/>
+                <constraint firstItem="ffc-kW-GCq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DDO-FL-X7A"/>
+                <constraint firstItem="pMk-MO-9HC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="MQO-hb-h4V"/>
+                <constraint firstItem="nfz-6r-anc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PKE-fI-lQP"/>
+                <constraint firstItem="ENl-W1-vVg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hsP-iQ-UcQ"/>
+                <constraint firstItem="ffc-kW-GCq" firstAttribute="top" secondItem="nfz-6r-anc" secondAttribute="bottom" constant="30" id="qsU-gP-QEB"/>
+                <constraint firstItem="pMk-MO-9HC" firstAttribute="top" secondItem="ENl-W1-vVg" secondAttribute="bottom" constant="10" id="twR-Py-Y0p"/>
+            </constraints>
+            <point key="canvasLocation" x="-34.351145038167935" y="136.61971830985917"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="icloud.and.arrow.up.fill" catalog="system" width="128" height="108"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

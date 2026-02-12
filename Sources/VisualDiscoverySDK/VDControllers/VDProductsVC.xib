@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VDProductsVC" customModule="VD_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="4ob-fz-WKN" id="Tma-Ju-kcz"/>
+                <outlet property="emptyListLabel" destination="Ogr-ID-eaM" id="wQ9-Un-4ei"/>
+                <outlet property="loadingIndicator" destination="SPp-yB-vk0" id="XVs-E8-evs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No matching products found." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogr-ID-eaM">
+                    <rect key="frame" x="30" y="168" width="333" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4ob-fz-WKN">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="DPn-lC-dix">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Z01-4c-ltL"/>
+                        <outlet property="delegate" destination="-1" id="WcP-nH-ECF"/>
+                    </connections>
+                </collectionView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SPp-yB-vk0">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4ob-fz-WKN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7XY-lu-4Rl"/>
+                <constraint firstItem="SPp-yB-vk0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CES-g8-Wwt"/>
+                <constraint firstItem="4ob-fz-WKN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Hgj-07-ehe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ogr-ID-eaM" secondAttribute="trailing" constant="30" id="Jze-ZS-4Zj"/>
+                <constraint firstItem="4ob-fz-WKN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="e7P-aY-xyy"/>
+                <constraint firstAttribute="bottom" secondItem="4ob-fz-WKN" secondAttribute="bottom" id="eWS-oW-zmP"/>
+                <constraint firstItem="Ogr-ID-eaM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="jVJ-3O-3aZ"/>
+                <constraint firstItem="Ogr-ID-eaM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="scd-DP-kFw"/>
+                <constraint firstItem="SPp-yB-vk0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w9i-2G-EbS"/>
+            </constraints>
+            <point key="canvasLocation" x="-34.351145038167935" y="136.61971830985917"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
