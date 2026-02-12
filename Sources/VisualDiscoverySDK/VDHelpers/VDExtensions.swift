@@ -57,7 +57,7 @@ extension String {
 }
 
 extension UICollectionView {
-    public static func registerFor(identifier: String) {
+    func registerFor(identifier: String) {
         let bundle = Bundle.module
         let nib = UINib(nibName: identifier, bundle: bundle)
         self.register(nib, forCellWithReuseIdentifier: identifier)

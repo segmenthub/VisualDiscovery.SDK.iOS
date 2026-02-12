@@ -17,9 +17,8 @@ let package = Package(
     targets: [
         .target(
             name: "VisualDiscoverySDK",
-            dependencies: ["Kingfisher"]),
-        .testTarget(
-            name: "VisualDiscoverySDKTests",
-            dependencies: ["VisualDiscoverySDK"]),
+            dependencies: ["Kingfisher"],
+            path: "Sources",
+            resources: [.process("Resources")]),
     ]
 )
