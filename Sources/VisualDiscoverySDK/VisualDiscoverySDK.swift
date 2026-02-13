@@ -7,6 +7,14 @@
 import Foundation
 import UIKit
 
+public enum VDSupportedLanguage: String {
+    case en = "en"
+    case tr = "tr"
+    case de = "de"
+    case fr = "fr"
+    case es = "es"
+}
+
 public protocol VisualDiscoverySDKProtocol {
     func visiualDiscoveryProductSelected(product: VDProductItem)
 }
@@ -17,6 +25,7 @@ public class VisualDiscoverySDK {
     
     public var delegate: VisualDiscoverySDKProtocol?
     private var account_id: String?
+    public var selectedLanguage: VDSupportedLanguage?
     private let plistKeyName = "VDAccountID"
     let apiUrl = "https://api.visualdiscovery.net/v1/discover"
     

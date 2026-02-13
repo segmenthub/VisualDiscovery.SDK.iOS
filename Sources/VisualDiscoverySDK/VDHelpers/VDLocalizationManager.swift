@@ -121,11 +121,13 @@ class VDLocalizationManager {
     ]
     
     private static var currentLanguageCode: String {
-        let language = Locale.current.identifier
-        
-        let code = String(language.prefix(2))
-        
-        return translations.keys.contains(code) ? code : "en"
+        if let selectedLanguage = VisualDiscoverySDK.shared.selectedLanguage?.rawValue {
+            return selectedLanguage
+        } else {
+            let language = Locale.current.identifier
+            let code = String(language.prefix(2))
+            return translations.keys.contains(code) ? code : "en"
+        }
     }
     
     static func getText(for key: AppTextKey) -> String {
