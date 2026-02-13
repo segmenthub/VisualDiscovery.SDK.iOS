@@ -9,6 +9,8 @@ import UIKit
 public class VDUploadVC: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var labelHeadline: UILabel!
+    @IBOutlet weak var labelSubline: UILabel!
     @IBOutlet weak var buttonUpload: UIButton!
     @IBOutlet weak var buttonCamera: UIButton!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -28,6 +30,9 @@ public class VDUploadVC: UIViewController {
         self.imageView.layer.cornerRadius = 40
         let closeButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeTapped))
         self.navigationItem.rightBarButtonItem = closeButton
+        self.labelHeadline.text = VDLocalizationManager.getText(for: .headline)
+        self.labelSubline.text = VDLocalizationManager.getText(for: .subline)
+        self.buttonUpload.setTitle(VDLocalizationManager.getText(for: .uploadPhoto), for: .normal)
     }
 
     @IBAction func uploadTapped() {
@@ -60,7 +65,7 @@ public class VDUploadVC: UIViewController {
     }
     
     func showErrorFor() {
-        let alert = UIAlertController(title: "Error", message: "No items detected. Please try another image.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: VDLocalizationManager.getText(for: .noItemsFound), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

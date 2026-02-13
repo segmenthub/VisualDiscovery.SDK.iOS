@@ -1,6 +1,5 @@
 //
 //  VDExtensions.swift
-//  VD Demo
 //
 //  Created by segmenthub on 12.02.2026.
 //

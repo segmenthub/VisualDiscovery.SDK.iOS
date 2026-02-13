@@ -13,6 +13,8 @@ public class VDDetectsVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var viewBot: UIView!
     @IBOutlet weak var imageWidth: NSLayoutConstraint!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var buttonShowProducts: UIButton!
     
     var detectList: [VDDetectItem] = []
     var requestId: String?
@@ -31,6 +33,8 @@ public class VDDetectsVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.registerFor(identifier: "VDDetectCC")
+        self.labelTitle.text = VDLocalizationManager.getText(for: .detectedObjects)
+        self.buttonShowProducts.setTitle(VDLocalizationManager.getText(for: .showProducts), for: .normal)
     }
     
     public override func viewDidLayoutSubviews() {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,9 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VDDetectsVC" customModule="VD_Demo" customModuleProvider="target">
             <connections>
                 <outlet property="bgImageView" destination="JIy-US-UYI" id="IAg-bp-XFr"/>
+                <outlet property="buttonShowProducts" destination="fyy-Ud-YOA" id="noT-Az-vTl"/>
                 <outlet property="collectionView" destination="6Ed-85-AQN" id="RBP-b5-2h5"/>
                 <outlet property="imageView" destination="XwE-Ya-rD3" id="27U-Pe-LgJ"/>
                 <outlet property="imageWidth" destination="0SB-qA-XxQ" id="rg2-2G-eBT"/>
+                <outlet property="labelTitle" destination="UYN-d9-niA" id="suM-V1-F6v"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewBot" destination="OMX-pb-Bag" id="nSC-Zx-Ujf"/>
             </connections>
@@ -68,7 +71,7 @@
                             </connections>
                         </collectionView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyy-Ud-YOA">
-                            <rect key="frame" x="112.66666666666667" y="205" width="167.66666666666657" height="45"/>
+                            <rect key="frame" x="112.66666666666667" y="205" width="167.66666666666663" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="CNK-o3-KSo"/>
                             </constraints>

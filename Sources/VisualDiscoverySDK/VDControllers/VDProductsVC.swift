@@ -29,6 +29,7 @@ public class VDProductsVC: UIViewController {
         self.addSearchBarToNavigationBar( )
         self.collectionView.registerFor(identifier: "VDProductCC")
         self.makeSearchFor(search_url: self.searchUrl)
+        self.emptyListLabel.text = VDLocalizationManager.getText(for: .noMatchingFound)
         let resetButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetSearch))
         self.navigationItem.rightBarButtonItem = resetButton
     }
@@ -37,7 +38,7 @@ public class VDProductsVC: UIViewController {
         let search = UISearchController(searchResultsController: nil)
         search.delegate = self
         search.searchBar.delegate = self
-        search.searchBar.placeholder = "Refine search (e.g. 'red', 'cotton', 'female')"
+        search.searchBar.placeholder = VDLocalizationManager.getText(for: .placeholder)
         self.navigationItem.searchController = search
         self.navigationItem.hidesSearchBarWhenScrolling = true
     }

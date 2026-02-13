@@ -1,6 +1,5 @@
 //
 //  VDProductCC.swift
-//  VD Demo
 //
 //  Created by segmenthub on 5.02.2026.
 //
