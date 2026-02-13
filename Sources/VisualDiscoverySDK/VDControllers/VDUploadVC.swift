@@ -71,10 +71,12 @@ public class VDUploadVC: UIViewController {
     }
     
     func openPickerFor(source: UIImagePickerController.SourceType) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = source
-        self.present(picker, animated: true)
+        DispatchQueue.main.async {
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = source
+            self.present(picker, animated: true)
+        }
     }
     
     @objc func closeTapped() {

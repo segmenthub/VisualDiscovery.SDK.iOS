@@ -34,7 +34,7 @@ public class VDProductCC: UICollectionViewCell {
         self.delegate = delegate
         self.model = model
         let percent = model.similarity ?? 0
-        self.labelPercent.text = "\(Int(percent))% Match"
+        self.labelPercent.text = "\(Int(percent))% \(VDLocalizationManager.getText(for: .match))"
         self.imageView.loadImage(from: model.image_url)
         self.labelBrand.text = model.brand
         self.labelName.text = model.name
