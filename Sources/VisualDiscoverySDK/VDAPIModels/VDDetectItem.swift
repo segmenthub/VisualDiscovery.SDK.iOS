@@ -5,13 +5,13 @@
 //
 
 import Foundation
-nonisolated public struct VDDetectItem : Codable {
+nonisolated public struct VDDetectItem : Codable, Sendable {
     
-	let label : String?
-	let confidence : Double?
-	let image_url : String?
-	let search_url : String?
-    let box : VDBoxModel?
+    public let label : String?
+    public let confidence : Double?
+    public let image_url : String?
+    public let search_url : String?
+    public let box : VDBoxModel?
 
 	enum CodingKeys: String, CodingKey {
 

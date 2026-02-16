@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct VDProductItem : Codable {
+public struct VDProductItem : Codable, Sendable {
     public let id: String?
     public let name: String?
     public let url: String?

@@ -8,8 +8,8 @@ import Foundation
 
 nonisolated public struct VDSearchResponse : Codable, Sendable {
     
-	let status : String?
-	let similar_products : [VDProductItem]?
+	public let status : String?
+    public let similar_products : [VDProductItem]?
 
 	enum CodingKeys: String, CodingKey {
 

@@ -8,9 +8,9 @@ import Foundation
 
 nonisolated public struct VDDetectResponse : Codable, Sendable {
     
-	let status : String?
-	let request_id : String?
-	let detections : [VDDetectItem]?
+    public let status : String?
+    public let request_id : String?
+    public let detections : [VDDetectItem]?
 
 	enum CodingKeys: String, CodingKey {
 

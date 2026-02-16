@@ -5,11 +5,11 @@
 //
 
 import Foundation
-nonisolated public struct VDBoxModel : Codable {
-	let x1 : Int?
-	let y1 : Int?
-	let x2 : Int?
-	let y2 : Int?
+nonisolated public struct VDBoxModel : Codable, Sendable {
+    public let x1 : Int?
+    public let y1 : Int?
+    public let x2 : Int?
+    public let y2 : Int?
 
 	enum CodingKeys: String, CodingKey {
 
