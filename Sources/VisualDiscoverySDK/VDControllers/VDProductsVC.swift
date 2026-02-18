@@ -69,10 +69,7 @@ public class VDProductsVC: UIViewController {
     }
     
     func refineSearchFor(text: String?) {
-        var newUrl = self.searchUrl
-        if let text = text {
-            newUrl = self.searchUrl?.appending("&search=\(text)")
-        }
+        var newUrl = VisualDiscoverySDK.shared.createNewSearchUrlFor(searchUrl: self.searchUrl, refineText: text)
         self.makeSearchFor(search_url: newUrl)
     }
     

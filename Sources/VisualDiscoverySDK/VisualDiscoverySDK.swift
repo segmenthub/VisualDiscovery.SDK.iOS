@@ -180,6 +180,14 @@ public class VisualDiscoverySDK {
         return body
     }
     
+    public func createNewSearchUrlFor(searchUrl: String?, refineText: String?) -> String? {
+        var newUrl = searchUrl
+        if let text = refineText {
+            newUrl = searchUrl?.appending("&search=\(text)")
+        }
+        return newUrl
+    }
+    
     // MARK: - UI Functions
     public func openUploadPageFor(containerVC: UIViewController) {
         let controller = VDUploadVC()
