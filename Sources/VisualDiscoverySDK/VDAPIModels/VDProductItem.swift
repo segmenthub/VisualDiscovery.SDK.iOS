@@ -8,6 +8,7 @@ import Foundation
 
 public struct VDProductItem : Codable, Sendable {
     public let id: String?
+    public let mpn: String?
     public let name: String?
     public let url: String?
     public let click_event_url: String?
@@ -24,6 +25,7 @@ public struct VDProductItem : Codable, Sendable {
     enum CodingKeys: String, CodingKey {
         
         case id = "id"
+        case mpn = "mpn"
         case name = "name"
         case url = "url"
         case click_event_url = "click_event_url"
@@ -41,6 +43,7 @@ public struct VDProductItem : Codable, Sendable {
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
+        mpn = try values.decodeIfPresent(String.self, forKey: .mpn)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         url = try values.decodeIfPresent(String.self, forKey: .url)
         click_event_url = try values.decodeIfPresent(String.self, forKey: .click_event_url)

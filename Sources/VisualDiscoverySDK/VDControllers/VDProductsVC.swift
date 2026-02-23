@@ -58,7 +58,7 @@ public class VDProductsVC: UIViewController {
                     self.collectionView.isHidden = false
                     self.emptyListLabel.isHidden = true
                 } else {
-                    debugPrint(error?.localizedDescription)
+                    debugPrint(error?.localizedDescription ?? "visual discovery search sevice error")
                     self.products = []
                     self.collectionView.isHidden = true
                     self.emptyListLabel.isHidden = false
@@ -69,7 +69,7 @@ public class VDProductsVC: UIViewController {
     }
     
     func refineSearchFor(text: String?) {
-        var newUrl = VisualDiscoverySDK.shared.createNewSearchUrlFor(searchUrl: self.searchUrl, refineText: text)
+        let newUrl = VisualDiscoverySDK.shared.createNewSearchUrlFor(searchUrl: self.searchUrl, refineText: text)
         self.makeSearchFor(search_url: newUrl)
     }
     
@@ -84,7 +84,7 @@ public class VDProductsVC: UIViewController {
                     self.collectionView.isHidden = false
                     self.emptyListLabel.isHidden = true
                 } else {
-                    debugPrint(error?.localizedDescription)
+                    debugPrint(error?.localizedDescription ?? "visual discovery get similars sevice error")
                     self.products = []
                     self.collectionView.isHidden = true
                     self.emptyListLabel.isHidden = false
