@@ -25,7 +25,7 @@ public class VisualDiscoverySDK {
     
     public var delegate: VisualDiscoverySDKProtocol?
     private var account_id: String?
-    public var selectedLanguage: VDSupportedLanguage?
+    public var selectedLanguage: VDSupportedLanguage = .en
     private let plistKeyName = "VDAccountID"
     let apiUrl = "https://api.visualdiscovery.net/v1/discover"
     
@@ -50,9 +50,11 @@ public class VisualDiscoverySDK {
         
         guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
         guard let account_id = self.account_id else { return }
+        let parameters: [String: String] = ["account_id": account_id,
+                                            "lang": VisualDiscoverySDK.shared.selectedLanguage.rawValue]
         
         request.httpBody = createBody(
-            parameters: ["account_id": account_id],
+            parameters: parameters,
             boundary: boundary,
             data: imageData,
             mimeType: "image/jpeg",
